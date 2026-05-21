@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>UTS - Gestión Deportiva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .navbar { background: linear-gradient(90deg, #1a2a6c, #b21f1f, #fdbb2d); border-bottom: 3px solid #ffca28; }
+        .card { 
+            transition: transform 0.3s, shadow 0.3s; 
+            border: none; 
+            border-radius: 15px; 
+            overflow: hidden;
+        }
+        .card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important; 
+        }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #e9ecef;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: #1a2a6c;
+        }
+        .btn-custom {
+            border-radius: 20px;
+            padding: 8px 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark mb-5">
+    <div class="container">
+        <span class="navbar-brand d-flex align-items-center">
+            <span class="material-icons me-2">sports_soccer</span>
+            <strong>UTS FÚTBOL - PANEL DE GESTIÓN</strong>
+        </span>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card p-4 shadow-sm text-center">
+                <div class="icon-circle"><span class="material-icons">groups</span></div>
+                <h4>Jugadores</h4>
+                <p class="text-muted small">Gestión de plantilla y posiciones.</p>
+                <a th:href="@{/jugadores}" class="btn btn-outline-primary btn-custom">Administrar</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow-sm text-center">
+                <div class="icon-circle"><span class="material-icons">psychology</span></div>
+                <h4>Entrenadores</h4>
+                <p class="text-muted small">Cuerpo técnico y trayectoria.</p>
+                <a th:href="@{/entrenadores}" class="btn btn-outline-primary btn-custom">Administrar</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow-sm text-center">
+                <div class="icon-circle"><span class="material-icons">shield</span></div>
+                <h4>Clubes</h4>
+                <p class="text-muted small">Información de equipos y sedes.</p>
+                <a th:href="@{/clubes}" class="btn btn-outline-primary btn-custom">Administrar</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow-sm text-center">
+                <div class="icon-circle"><span class="material-icons">public</span></div>
+                <h4>Asociaciones</h4>
+                <p class="text-muted small">Federaciones y presidentes.</p>
+                <a th:href="@{/asociaciones}" class="btn btn-outline-primary btn-custom">Administrar</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow-sm text-center">
+                <div class="icon-circle"><span class="material-icons">emoji_events</span></div>
+                <h4>Competiciones</h4>
+                <p class="text-muted small">Torneos y premios vigentes.</p>
+                <a th:href="@{/competiciones}" class="btn btn-outline-primary btn-custom">Administrar</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 py-4 text-muted border-top">
+        <small>&copy; 2026 Universidad Tecnológica de Santander - Ingeniería de Sistemas</small>
+    </footer>
+</div>
+
+</body>
+</html>
